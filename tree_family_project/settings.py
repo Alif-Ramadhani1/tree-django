@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-e97q=mgm=)i!vq)0qg%ztciz2j&@f6o^$+1u3%)4g12t*bfmrj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aliframadhani123.pythonanywhere.com']
 
 
 # Application definition
@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'tree_family_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'if0_36488448_family_tree',
-        'USER': 'if0_36488448',
-        'PASSWORD': '3kCZmDPhserK',
-        'HOST': 'sql201.infinityfree.com',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -121,9 +117,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    '/home/alif/tree_family_project/tree_family/static/',
+    '/home/AlifRamadhani123/tree_family_project/tree_family/static/',
 ]
-STATIC_ROOT = '/home/alif/tree_family_project/static/'
+STATIC_ROOT = '/home/AlifRamadhani123/tree_family_project/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
