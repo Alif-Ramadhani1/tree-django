@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'tree_family_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'if0_36488448_family_tree',
-        'USER': 'if0_36488448',
-        'PASSWORD': '3kCZmDPhserK',
-        'HOST': 'sql201.infinityfree.com',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
