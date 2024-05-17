@@ -2,13 +2,24 @@
 <html>
 <head>
     <title>Add Family Member</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
     <h1>Add Family Member</h1>
-    <form method="post">
+    <form method="POST">
         {% csrf_token %}
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+        <label for="birth_year">Birth Year:</label>
+        <input type="number" id="birth_year" name="birth_year" required><br>
+        <label for="death_year">Death Year:</label>
+        <input type="number" id="death_year" name="death_year"><br>
         <label for="parent">Parent:</label>
         <select id="parent" name="parent">
             <option value="">None</option>
@@ -16,8 +27,7 @@
                 <option value="{{ member.id }}">{{ member.name }}</option>
             {% endfor %}
         </select><br>
-        <button type="submit">Add</button>
+        <input type="submit" value="Add Member">
     </form>
 </body>
 </html>
-
