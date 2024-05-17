@@ -16,3 +16,6 @@ def add_member(request):
 def family_members(request):
     family_members = FamilyMember.objects.all()
     return render(request, 'tree_family/family_members.html', {'family_members': family_members})
+
+def home(request):
+    return render(request, 'tree_family/home.html')

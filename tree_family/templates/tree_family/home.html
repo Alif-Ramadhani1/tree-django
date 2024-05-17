@@ -1,0 +1,61 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Program Struktur Data</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="https://aliframadhani123.pythonanywhere.com/admin/">Admin Site</a></li>
+            <li><a href="https://aliframadhani123.pythonanywhere.com/family-members/">Family Tree</a></li>
+          </ul>
+        </nav>
+      </div>
+      <main class="content">
+        <section class="hero">
+          <img src="{% static 'gambar/online.png' %}" alt="online"/>
+          <div class="hero-content">
+            <h1>Struktur Data</h1>
+            <br />
+            <h2>Membuat Program Turunan(Tree) Menggunakan Django</h2>
+            <br /><br />
+            <p>
+              Kami adalah kelompok 1, mendapatkan tugas untuk membuat jurnal dengan tema Turunan(Tree). Ini adalah proyek yang kami buat dengan seksama, untuk membangun Program Family Tree sampai berhasil dijalankan.
+            </p>
+            <a href="https://github.com/Alif-Ramadhani1/tree-django" class="action-btn">Source Code</a>
+          </div>
+        </section>
+      </main>
+      <div class="footer">
+        <footer>
+          <ul>
+            <li>
+              <img src="{% static 'gambar/twitter.png' %}" alt="twitter" /><a><p>Alif si Tampan</p></a>
+            </li>
+            <li>
+              <img src="{% static 'gambar/facebook.png' %}" alt="facebook" /><a><p>Om Acong Pemberani</p></a>
+            </li>
+            <li>
+              <img src="{% static 'gambar/instagram.png' %}" alt="instagram" /><a><p>Alman cowonya Ajeng</p></a>
+            </li>
+            <li>
+              <img src="{% static 'gambar/ikbal.png' %}" alt="ikbal" /><a><p>Iqbal fakboy</p></a>
+            </li>
+            <li>
+              <img src="{% static 'gambar/iqbal.png' %}" alt="iqbal" /><a><p>Iqbal duplikat</p></a>
+            </li>
+            <li>
+              <img src="{% static 'gambar/vito.png' %}" alt="Vito" /><a><p>Vito Omaygatt</p></a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

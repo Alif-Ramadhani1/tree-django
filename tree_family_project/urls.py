@@ -17,10 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from tree_family.views import add_member, family_members   # Import family_members dari views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('add-member/', add_member, name='add_member'),
     path('family-members/', family_members, name='family_members'),   # Tambahkan path untuk family_members
+    path('', include('tree_family.urls')),
 ]
 
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
