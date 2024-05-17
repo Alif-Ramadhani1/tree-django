@@ -1,36 +1,25 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
+    {% load static %}
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Family Members</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <!-- Load CSS file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'family_members.css' %}">
 </head>
 <body>
-    <h1>Family Members</h1>
-    <ul id="family-tree">
-        {% for member in family_members %}
-            {% if not member.parent %}
-                <li class="parent-node">{{ member.name }}
-                    {% if member.children.all %}
-                        <ul class="collapsed">
-                            {% for child in member.children.all %}
-                                <li class="parent-node">{{ child.name }}
-                                    {% if child.children.all %}
-                                        <ul class="collapsed">
-                                            {% for grandchild in child.children.all %}
-                                                <li>{{ grandchild.name }}</li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% endif %}
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                </li>
-            {% endif %}
-        {% endfor %}
-    </ul>
+    <h1 class="judul">Family Members</h1>
+    <div class="tree" id="FamilyTreeDiv">
+        <ul id="family-tree">
+            {% for member in family_members %}
+                {% if not member.parent %}
+                    {% include 'tree_family/family_member_node.html' with member=member %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
     <script src="{% static 'tree_family/script.js' %}"></script>
 </body>
 </html>
-
