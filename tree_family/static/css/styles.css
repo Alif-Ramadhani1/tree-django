@@ -1,0 +1,27 @@
+/* family_tree.css */
+body {
+    font-family: Arial, sans-serif;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    margin-bottom: 10px;
+}
+li ul {
+    margin-left: 20px;
+}
+.collapsed > ul {
+    display: none;
+}
+.expanded > ul {
+    display: block;
+}
+.parent-node {
+    cursor: pointer;
+}
+.parent-node:hover > ul {
+    display: block;
+}
