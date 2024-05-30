@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #1a1a1a;
+    background-color: #0c0f38;
     color: #ffffff;
 }
 
@@ -19,6 +19,9 @@ body {
 }
 
 .tree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     white-space: nowrap;
     min-width: 800px;
     min-height: 500px;
@@ -28,13 +31,17 @@ body {
 .tree ul {
     padding-top: 20px;
     position: relative;
+    display: flex;
+    justify-content: center;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
 }
 
 .tree li {
-    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     list-style-type: none;
     position: relative;
@@ -99,14 +106,14 @@ body {
     border: 1px solid #555;
     padding: 5px 10px;
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-family: 'Roboto', Arial, Verdana, Tahoma;
     font-size: 11px;
     display: inline-block;
     min-width: 80px;
     min-height: 30px;
     border-radius: 5px;
-    background-color: #333;
+    background-color: #d2fcff;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
